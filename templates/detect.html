@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/style.css" />
+    <link
+      rel="shortcut icon"
+      href="../static/favicon.png"
+      type="image/x-icon"
+    />
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.5.1/mammoth.browser.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+
+    <title>TextGuardian</title>
+  </head>
+  <body>
+    <div id="main">
+      <div class="nav">
+          <div class="nav-container">
+              <div class="logo">
+                <a href="/" class="lg-logo">TextGuardian</a>
+                <a href="/" class="sm-logo">TG</a>
+              </div>
+              <div class="menu">
+                <a href="/">Home</a>
+                <a href="/detect">DETECT</a>
+                <a href="/about">ABOUT</a>
+                <a href="https://github.com/Asrar-Ahammad/TextGuardian">
+                  <i class="ri-github-fill"></i>
+                </a>
+              </div>
+              <div class="menu-res">
+                <a href="/">Home</a>
+                <a href="/detect">DETECT</a>
+                <a href="/about">ABOUT</a>
+                <a href="https://github.com/Asrar-Ahammad/TextGuardian">
+                  <i class="ri-github-fill"></i>
+                </a>
+              </div>
+              <div class="menu-icon">
+                <i class="ri-menu-line"></i>
+              </div>
+            </div>
+          </div>
+          <div class="detect-body">
+        <div class="input-area">
+          <div class="text-area">
+            <form action="/detect" method="post">
+              <div class="heading">
+                <h3>Input text</h3>
+                <!-- <label class="switch">
+                  <input
+                    type="checkbox"
+                    id="languageToggle"
+                    name="languageToggle"
+                    onclick="toggleLanguage()"
+                  /> -->
+                  <select name="language" id="language">
+                    <option value="english">English</option>
+                    <option value="hindi">हिंदी</option>
+                    <option value="tamil">தமிழ்</option>
+                  </select>
+                </label>
+              </div>
+              <textarea
+                id="textarea"
+                name="input_text"
+                cols="30"
+                rows="10"
+                oninput="countWords()"
+                placeholder="Enter text in English"
+                required
+              ></textarea>
+              <div class="input-file">
+                <input type="file" id="fileInput" accept=".txt" onchange="handleFile(this.files)">
+                <p id="wordCount">0/1000</p>
+              </div>
+              <input type="submit" value="Detect" class="detect-btn" />
+            </form>
+          </div>
+        </div>
+        <div class="result">
+          <div class="result-heading">
+            <h3>Result</h3>
+            <div class="legend">
+              <div class="label">
+                <div class="circle"></div>
+                <div class="circle-text">AI</div>
+              </div>
+              <div class="label">
+                <div class="circle"></div>
+                <div class="circle-text">Human</div>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="result-view">{{ result | safe }}</div> -->
+          <div class="result-view">
+            {{result | safe}}
+          </div>  
+        </div>
+      </div>
+      <h2 class="analysis-heading">Analysis</h2>
+      <div class="chart-container">
+        <div class="chart-box">
+          <h3>AI Generated</h3>
+          <div class="chart-border">
+            <div class="chart">
+              <p class="chart-text">{{ ai_percentage }}%</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="chart-box">
+          <h3>Human Generated</h3>
+        <div class="chart-border">
+          <div class="chart2">
+            <p class="chart-text2">{{ Human_percentage }}%</p>
+          </div>
+        </div>
+        </div>
+        <!-- <div class="metrics-details">
+          <p>Perplexity : {{perplexity}}</p> 
+          <p>Burstiness : {{burstiness_score}}</p>
+          <p>Conclusion : {{ai_result}}</p>
+        </div> -->
+        
+      </div>
+      <div id="footer">
+        <div class="footer-logo">
+          <h3>TextGuardian</h3>
+        </div>
+        <div class="footer-menu">
+          <a href="/">HOME</a>
+          <a href="/detect">DETECT</a>
+          <a href="/about">ABOUT</a>
+          <a href="https://github.com/Asrar-Ahammad/TextGuardian">GTIHUB</a>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="../static/script.js"></script>
+</html>

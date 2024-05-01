@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/about.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="../static/favicon.png"
+      type="image/x-icon"
+    />
+    <title>TextGuardian</title>
+  </head>
+  <body>
+    <div id="main">
+      <div class="nav">
+        <div class="nav-container">
+          <div class="logo">
+            <a href="/" class="lg-logo">TextGuardian</a>
+            <a href="/" class="sm-logo">TG</a>
+          </div>
+          <div class="menu">
+            <a href="/">Home</a>
+            <a href="/detect">DETECT</a>
+            <a href="/about">ABOUT</a>
+            <a href="https://github.com/Asrar-Ahammad/TextGuardian">
+              <i class="ri-github-fill"></i>
+            </a>
+          </div>
+          <div class="menu-res">
+            <a href="/">Home</a>
+            <a href="/detect">DETECT</a>
+            <a href="/about">ABOUT</a>
+            <a href="https://github.com/Asrar-Ahammad/TextGuardian">
+              <i class="ri-github-fill"></i>
+            </a>
+          </div>
+          <div class="menu-icon">
+            <i class="ri-menu-line"></i>
+          </div>
+        </div>
+      </div>
+      <div class="explain">
+        <h3>BERT based Multilingual cased model</h3>
+        <p>
+          BERT (Bidirectional Encoder Representations from Transformers) is a
+          pre-trained language model developed by Google that has revolutionized
+          the field of natural language processing (NLP). The Multilingual Cased
+          variant of BERT is a powerful model that can handle text in multiple
+          languages while preserving the original casing of the input text.
+        </p>
+        <p>
+          The Multilingual Cased BERT model is trained on a large corpus of
+          multilingual data, which allows it to learn the nuances and
+          intricacies of various languages simultaneously. This model uses a
+          transformer architecture, which relies on self-attention mechanisms to
+          capture long-range dependencies within the input text. The model is
+          pre-trained on two tasks: Masked Language Modeling (MLM) and Next
+          Sentence Prediction (NSP). In MLM, the model learns to predict masked
+          words based on the surrounding context, while in NSP, it learns to
+          understand the relationship between pairs of sentences. Once
+          pre-trained, the Multilingual Cased BERT model can be fine-tuned on
+          specific NLP tasks, such as text classification, named entity
+          recognition, question answering, and more. Its multilingual
+          capabilities make it particularly useful for applications that require
+          handling text in multiple languages, such as cross-lingual information
+          retrieval, machine translation, and sentiment analysis for global
+          products or services.
+        </p>
+        <div class="img-center">
+          <img
+            src="../static/BERT architecture 1.png"
+            class="architecture"
+            alt=""
+          />
+          <h4>Architecture of BERT</h4>
+        </div>
+        <h3>Working Pipeline</h3>
+        <p>
+          The flowchart illustrates the process of classifying a sentence as
+          either "human written" or "AI generated" using a BERT-based
+          multilingual cased model. The process starts with the user inputting
+          text, which goes through a language detection step (LangDetect) that
+          identifies the language as either Hindi or English/Tamil.
+        </p>
+        <p>
+          If the language is Hindi, the text is tokenized using an Indic
+          Tokenizer. If the language is English or Tamil, the text is tokenized
+          using the BERT tokenizer. After tokenization, the sentence is
+          classified by the BERT-based multilingual cased model.
+        </p>
+        <div class="img-center">
+          <img
+            src="../static/Prediction workflow.png"
+            class="prediction-workflow"
+            alt=""
+          />
+          <h4>Prediction pipeline</h4>
+        </div>
+        <p>
+          The model then determines whether the sentence is "human written" or
+          not. If the sentence is classified as "human written," the output is
+          displayed as such. However, if the sentence is not classified as
+          "human written," the output is labeled as "AI generated."
+        </p>
+        <p>
+          This process can be useful in various applications, such as content
+          moderation, plagiarism detection, or analyzing the authenticity of
+          user-generated content, particularly in multilingual settings where
+          the ability to handle multiple languages is crucial.
+        </p>
+        <h3>How We Use Words and How Often We Use Them</h3>
+        <p>
+          Perplexity and burstiness essentially breaks down to: how we use words
+          and how often we use them. As writers and content creators, sometimes
+          our writing is predictable. Beyond that, sometimes the words we use
+          pop up suddenly in groups or “bursts”. Let’s break down each one in
+          turn.
+        </p>
+        <h4>What is Perplexity?</h4>
+        <h5>
+          The mathematical formula for calculating perplexity looks like this:
+        </h5>
+        <img
+          src="https://assets-global.website-files.com/63ee996e404f640fa6b177c9/64e2315e1d1c34380ee14a7f_mathematical-formula-for-calculating-perplexity.jpg"
+          alt=""
+        />
+        <p>
+          Essentially this formula calculates how predictable the next word is.
+          Imagine reading a book and trying to guess what the next word will be.
+          If you can guess it without batting an eye, that’s a low level of
+          perplexity. If it’s more difficult to guess, that’s high perplexity.
+          With this formula, the lower the number, the easier it is to guess the
+          words. So what does that mean for you as a writer? If your writing is
+          too predictable, it might come across as boring. If it’s too
+          unpredictable, it can be confusing and hard to understand. Having a
+          good balance is crucial to engage your readers and communicate clearly
+          and concisely.
+        </p>
+        <h4>What is Burstiness?</h4>
+        <p>
+          At times, we writers can get pretty comfortable in our use of words,
+          to the point where we use some words again and again. Imagine you’re
+          writing about a birthday party. In describing it, you’ll mention the
+          word “cake” about a dozen times, but after describing the scene, you
+          probably won’t talk about the cake again much at all. That’s
+          burstiness. The same happens in fiction when introducing characters.
+          You’ll mention their names often at the beginning, but less so toward
+          the end, because people already understand who they are. That’s
+          burstiness in a nutshell. Why does that matter to you as a content
+          professional? It means that using words in bursts can change the focus
+          of your story or narrative. Some writers employ this often as a matter
+          of style. At the same time, repeating words can make your point
+          stronger. As with perplexity, finding a good balance is crucial to the
+          quality of your writing.
+        </p>
+        <h3>How Do Perplexity and Burstiness Interact?</h3>
+        <p>
+          They may seem like two totally separate concepts but both perplexity
+          and burstiness overlap. If a text has lots of bursts, it may be harder
+          to guess the next word because the text is overall less uniform. Some
+          types of writing or articles may have more bursts than others. And
+          much of it is up to the individual writer’s personal style. As AI
+          continues to develop and tools become more attuned to the nuances and
+          subtleties of human language (including perplexity and burstiness),
+          you can expect these platforms to offer more than just grammar and
+          spelling suggestions. In the very near future, these tools might be
+          able to tell writers if they’re being too predictable or suggest when
+          to use more burstiness in their language. As a result, writers can
+          make their content more engaging, mix up their style and play around
+          with the predictability of their writing.
+        </p>
+        <p>
+          Reference :
+          <a
+            href="https://originality.ai/blog/perplexity-and-burstiness-in-writing"
+            >Originality.ai</a
+          >
+        </p>
+      </div>
+      <div id="footer">
+        <div class="footer-logo">
+          <h3>TextGuardian</h3>
+        </div>
+        <div class="footer-menu">
+          <a href="/">HOME</a>
+          <a href="/detect">DETECT</a>
+          <a href="/about">ABOUT</a>
+          <a href="https://github.com/Asrar-Ahammad/TextGuardian">GTIHUB</a>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="../static/script.js"></script>
+</html>
