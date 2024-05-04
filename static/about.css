@@ -69,6 +69,10 @@ a {
   text-decoration: underline;
 }
 
+.menu a:nth-child(4):hover{
+  text-decoration: none;
+}
+
 /* ============= Explain section ================ */
 .explain {
   padding: 5vw 20vw;

@@ -69,6 +69,10 @@ a {
   text-decoration: underline;
 }
 
+.menu a:nth-child(4):hover{
+  text-decoration: none;
+}
+
 /* ========== detect body =========== */
 .detect-body{
   display: flex;
@@ -99,6 +103,7 @@ form .heading h3 {
   font-size: 1.12rem;
   border: 1px solid black;
   border-radius: .3rem;
+  cursor: pointer;
 }
 
 /* ========= Form textarea ============== */
@@ -127,6 +132,7 @@ form textarea {
   font-weight: 400;
   border: 1px solid black;
   cursor: pointer;
+  transition: 0.3s ease;
 }
 .input-area .detect-btn:hover {
   background-color: white;
@@ -158,6 +164,7 @@ form textarea {
   border-radius: .3rem;
   cursor: pointer;
   margin-right: 1.25rem;
+  transition: .3s ease;
 }
 
 #fileInput::-webkit-file-upload-button:hover{
@@ -214,6 +221,7 @@ form textarea {
   padding: 2rem;
   font-size: 1.25rem;
   overflow-y: scroll;
+  transition: 1s linear;
 }
 
 /* .result-view span{
