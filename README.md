@@ -1,4 +1,4 @@
-# AI Text Classifier
+# Text Guardian
 
 This is a Flask-based web application that allows users to classify text as either AI-generated or human-written. The application currently supports English and Hindi languages, with plans to add support for Tamil and more languages in the future.
 
