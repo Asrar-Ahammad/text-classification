@@ -132,11 +132,14 @@ form textarea {
   font-weight: 400;
   border: 1px solid black;
   cursor: pointer;
-  transition: 0.3s ease;
+  transition: .3s ease;
 }
 .input-area .detect-btn:hover {
   background-color: white;
   color: black;
+}
+.detect-btn:active{
+  scale: .9;
 }
 
 .input-file{
@@ -170,6 +173,9 @@ form textarea {
 #fileInput::-webkit-file-upload-button:hover{
   background-color: white;
   color: #000000;
+}
+#fileInput::-webkit-file-upload-button:active{
+  scale: .9;
 }
 
 /* ============= Loader ============= */

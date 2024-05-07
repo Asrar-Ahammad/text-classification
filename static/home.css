@@ -124,6 +124,9 @@ a {
   background-color: white;
   color: black;
 }
+.detect-btn:active{
+  scale: .9;
+}
 
 .hero-img{
   display: flex;
@@ -192,6 +195,7 @@ a {
 
 .learn-more-btn{
   margin-top: 1.5rem;
+  transition: .3s ease;
 }
 
 .learn-more-btn a{
@@ -209,6 +213,9 @@ a {
 .learn-more-btn a:hover{
   background-color: rgb(0, 0, 0);
   color: rgb(255, 255, 255);
+}
+.learn-more-btn:active{
+  scale: .9;
 }
 
 .info-img{
@@ -381,6 +388,9 @@ a {
 
 .active, .accordion:hover {
   background-color: #e0e0e0;
+}
+.accordion:active{
+  scale: .988;
 }
 
 .panel {
