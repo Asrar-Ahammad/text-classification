@@ -13,9 +13,6 @@
     href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
     rel="stylesheet"
 />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.5.1/mammoth.browser.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
-
     <title>TextGuardian</title>
   </head>
   <body>
@@ -50,20 +47,13 @@
           <div class="detect-body">
         <div class="input-area">
           <div class="text-area">
-            <form action="/detect" method="post">
+            <form action="/detect" method="post" id="detect-form">
               <div class="heading">
                 <h3>Input text</h3>
-                <!-- <label class="switch">
-                  <input
-                    type="checkbox"
-                    id="languageToggle"
-                    name="languageToggle"
-                    onclick="toggleLanguage()"
-                  /> -->
                   <select name="language" id="language">
                     <option value="english">English</option>
                     <option value="hindi">हिंदी</option>
-                    <option value="tamil">தமிழ்</option>
+                    <option value="tamil" disabled>தமிழ்</option>
                   </select>
                 </label>
               </div>
@@ -142,6 +132,30 @@
         </div>
       </div>
     </div>
+    <div class="loader-container" id="loader-container">
+      <div class="three-body">
+        <div class="three-body__dot"></div>
+        <div class="three-body__dot"></div>
+        <div class="three-body__dot"></div>
+        </div>
+    </div>
   </body>
   <script src="../static/script.js"></script>
+  <script>
+    function showLoader() {
+      document.getElementById("loader-container").style.display = "flex";
+    }
+
+    function hideLoader() {
+      document.getElementById("loader-container").style.display = "none";
+    }
+
+    document.getElementById("detect-form").addEventListener("submit", function() {
+      showLoader();
+    });
+
+    setTimeout(function() {
+      hideLoader();
+    }, 3000);
+  </script>
 </html>
