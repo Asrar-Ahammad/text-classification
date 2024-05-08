@@ -5,6 +5,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
 }
 
 html,
@@ -530,6 +531,41 @@ a {
 
 .footer-menu a:hover {
   text-decoration: underline;
+}
+
+/* ========= Scroll to top button =============== */
+
+#scrollToTopBtn {
+  display: none; /* Hide the button by default */
+  height: 40px;
+  width: fit-content;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 30px; 
+  right: 30px; 
+  background-color: #000000; 
+  color: #fff;
+  border: none;
+  border-radius: .3rem;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: -12px 11px 43px -9px rgba(0,0,0,0.79);
+  transition: .3s ease;
+}
+
+#scrollToTopBtn i {
+  vertical-align: middle; /* Adjust icon alignment */
+}
+
+#scrollToTopBtn:hover {
+  background-color: #6b6b6b; /* Hover background color */
+}
+
+#scrollToTopBtn:active{
+  scale: .9;
 }
 
 /*  ============= Responsiveness ============= */

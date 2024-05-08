@@ -206,6 +206,9 @@
             </div>
             <p style="margin-top: 2rem;">© copyright 2020 - 2024</p>
           </div>
+          <button onclick="scrollToTop()" id="scrollToTopBtn" title="Go to top">
+            <i class="ri-arrow-up-line"></i>
+        </button>
     </div>
   </div>
 </body>
@@ -224,6 +227,25 @@
       }
     });
   }
+
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    }
+
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        var scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            scrollToTopBtn.style.display = "flex";
+        } else {
+            scrollToTopBtn.style.display = "none";
+        }
+        }
   </script>
 <script src="../static/js/script.js"></script>
 </html>
