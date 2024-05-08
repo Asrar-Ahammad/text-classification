@@ -227,11 +227,11 @@ def detection():
             result_text += f"<span style='color:blue'>Please Enter Suitable Language</span>. "
             ai_result = "The Entered Text is Not applicable "     
         if ai_percentage > 50:
-            ai_result = "The text is likely to be AI generated"
+            ai_result = "The text is more likely to be AI generated"
         elif ai_percentage <50:
-            ai_result = "The text is likely to be Human generated"
+            ai_result = "The text is more likely to be Human written"
         else:
-            ai_result = "The text is likely to be both AI generated and Human generated"
+            ai_result = "The text is likely to be both AI generated and Human written"
     return render_template('detect.html', result=result_text, ai_percentage=ai_percentage, Human_percentage = Human_percentage, selected_toggle=selected_toggle, ai_result = ai_result)
 
 @app.route('/about')
