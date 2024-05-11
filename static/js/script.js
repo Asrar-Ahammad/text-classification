@@ -98,64 +98,68 @@ function chart2() {
 }
 chart2();
 
-
 function handleFile(files) {
   const file = files[0];
   const reader = new FileReader();
 
-  reader.onload = function(event) {
-      const contents = event.target.result;
-      if (file.name.endsWith('.txt')) {
-          document.getElementById('textarea').value = contents;
-      } else if (file.name.endsWith('.docx')) {
-          mammoth.extractRawText({arrayBuffer: contents}).then(function(result) {
-              document.getElementById('textarea').value = result.value;
-          }).catch(function(err) {
-              console.log(err);
-              alert("Error reading .docx file.");
-          });
-      } else if (file.name.endsWith('.pdf')) {
-          readPdf(contents);
-      }
+  reader.onload = function (event) {
+    const contents = event.target.result;
+    if (file.name.endsWith(".txt")) {
+      document.getElementById("textarea").value = contents;
+    } else if (file.name.endsWith(".docx")) {
+      mammoth
+        .extractRawText({ arrayBuffer: contents })
+        .then(function (result) {
+          document.getElementById("textarea").value = result.value;
+        })
+        .catch(function (err) {
+          console.log(err);
+          alert("Error reading .docx file.");
+        });
+    } else if (file.name.endsWith(".pdf")) {
+      readPdf(contents);
+    }
   };
 
-  reader.onerror = function(event) {
-      console.error("File could not be read! Code " + event.target.error.code);
+  reader.onerror = function (event) {
+    console.error("File could not be read! Code " + event.target.error.code);
   };
 
   if (file) {
-      if (file.name.endsWith('.docx') || file.name.endsWith('.pdf')) {
-          reader.readAsArrayBuffer(file);
-      } else {
-          reader.readAsText(file);
-      }
+    if (file.name.endsWith(".docx") || file.name.endsWith(".pdf")) {
+      reader.readAsArrayBuffer(file);
+    } else {
+      reader.readAsText(file);
+    }
   }
 }
 
 function readPdf(data) {
-  const loadingTask = pdfjsLib.getDocument({data});
-  loadingTask.promise.then(function(pdf) {
+  const loadingTask = pdfjsLib.getDocument({ data });
+  loadingTask.promise
+    .then(function (pdf) {
       const pageNum = 1; // Change to read from multiple pages if needed
-      pdf.getPage(pageNum).then(function(page) {
-          page.getTextContent().then(function(textContent) {
-              let text = '';
-              for (const item of textContent.items) {
-                  text += item.str + '\n';
-              }
-              document.getElementById('textarea').value = text;
-          });
+      pdf.getPage(pageNum).then(function (page) {
+        page.getTextContent().then(function (textContent) {
+          let text = "";
+          for (const item of textContent.items) {
+            text += item.str + "\n";
+          }
+          document.getElementById("textarea").value = text;
+        });
       });
-  }).catch(function(err) {
-      console.error('Error loading PDF:', err);
+    })
+    .catch(function (err) {
+      console.error("Error loading PDF:", err);
       alert("Error reading .pdf file.");
-  });
+    });
 }
 
 var acc = document.getElementsByClassName("accordion");
 var i;
 
 for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
+  acc[i].addEventListener("click", function () {
     /* Toggle between adding and removing the "active" class,
     to highlight the button that controls the panel */
     this.classList.toggle("active");
@@ -169,5 +173,3 @@ for (i = 0; i < acc.length; i++) {
     }
   });
 }
-
-

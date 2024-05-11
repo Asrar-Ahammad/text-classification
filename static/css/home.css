@@ -71,7 +71,7 @@ a {
   text-decoration: underline;
 }
 
-.menu a:nth-child(4):hover{
+.menu a:nth-child(4):hover {
   text-decoration: none;
 }
 
@@ -81,7 +81,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: calc(90vh - 70px);
+  height: calc(85vh - 70px);
   width: 100%;
   padding: 3vw 7vw;
   margin-top: 90px;
@@ -105,7 +105,7 @@ a {
 .hero-heading h1 {
   font-size: 3.5rem;
 }
-.hero-heading p{
+.hero-heading p {
   font-size: 1.2rem;
   width: 90%;
 }
@@ -119,44 +119,42 @@ a {
   border: 1px solid black;
   cursor: pointer;
   transition: 0.3s ease;
-  border-radius: .3rem;
+  border-radius: 0.3rem;
 }
 .detect-btn:hover {
   background-color: white;
   color: black;
 }
-.detect-btn:active{
-  scale: .9;
+.detect-btn:active {
+  scale: 0.9;
 }
 
-.hero-img{
+.hero-img {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 5rem;
   width: 40%;
   height: fit-content;
-  
 }
-.hero-img img{
+.hero-img img {
   border-radius: 50%;
   filter: grayscale(1);
-  border-radius: .3rem;
+  border-radius: 0.3rem;
   height: 35rem;
   width: 35rem;
   object-fit: cover;
 }
 
-
 /* ============== Innovate section ============ */
-#innovate-section{
+#innovate-section {
   display: flex;
   align-items: center;
   padding: 3vw 7vw;
   width: 100%;
 }
 
-.info{
+.info {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -164,85 +162,85 @@ a {
   height: 100%;
 }
 
-.info h5{
+.info h5 {
   font-size: 1.25rem;
   font-weight: 500;
 }
-.info h1{
+.info h1 {
   font-size: 2.75rem;
 }
-.info p{
+.info p {
   font-size: 1.1rem;
   font-weight: 400;
 }
 
-.bullet-points{
+.bullet-points {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: .8rem;
+  gap: 0.8rem;
   font-size: 1.1rem;
 }
 
-.point i{
+.point i {
   font-size: 1.25rem;
-  margin-right: .9rem;
+  margin-right: 0.9rem;
   font-weight: 500;
 }
 
-.point span{
+.point span {
   font-weight: 400;
 }
 
-.learn-more-btn{
+.learn-more-btn {
   margin-top: 1.5rem;
-  transition: .3s ease;
+  transition: 0.3s ease;
 }
 
-.learn-more-btn a{
+.learn-more-btn a {
   background-color: rgb(255, 255, 255);
-  padding: 0.6rem .8rem;
+  padding: 0.6rem 0.8rem;
   color: rgb(0, 0, 0);
   font-size: 1.1rem;
   font-weight: 400;
   border: 1px solid black;
   cursor: pointer;
   transition: 0.3s ease;
-  border-radius: .2rem;
+  border-radius: 0.2rem;
 }
 
-.learn-more-btn a:hover{
+.learn-more-btn a:hover {
   background-color: rgb(0, 0, 0);
   color: rgb(255, 255, 255);
 }
-.learn-more-btn:active{
-  scale: .9;
+.learn-more-btn:active {
+  scale: 0.9;
 }
 
-.info-img{
+.info-img {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 5rem;
   width: 50%;
 }
-.info-img img{
+.info-img img {
   border-radius: 50%;
   filter: grayscale(1);
-  border-radius: .3rem;
+  border-radius: 0.3rem;
   height: 35rem;
   width: 35rem;
   object-fit: cover;
 }
 
 /* ============= Reliable section ================= */
-#reliable-section{
+#reliable-section {
   height: 90vh;
   width: 100%;
   position: relative;
   color: white;
 }
-#reliable-section video{
+#reliable-section video {
   width: 100%;
   height: 100%;
   filter: grayscale(1);
@@ -255,7 +253,7 @@ a {
   z-index: -1;
 }
 
-.reliable-info{
+.reliable-info {
   background-color: rgba(82, 81, 81, 0.29);
   height: 60%;
   display: flex;
@@ -265,25 +263,25 @@ a {
   gap: 1.5rem;
 }
 
-.reliable-info h5{
+.reliable-info h5 {
   font-size: 1.25rem;
   font-weight: 500;
 }
 
-.reliable-info h1{
+.reliable-info h1 {
   font-size: 3rem;
   width: 60%;
   text-align: center;
 }
 
-.reliable-info p{
+.reliable-info p {
   text-align: center;
   width: 60%;
   font-size: 1.25rem;
   font-weight: 400;
 }
 
-.reliable-features{
+.reliable-features {
   background-color: rgba(82, 81, 81, 0.29);
   display: flex;
   align-items: center;
@@ -291,7 +289,7 @@ a {
   height: 40%;
 }
 
-.reliable-features .card{
+.reliable-features .card {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -299,21 +297,21 @@ a {
   text-align: center;
   gap: 1.25rem;
 }
-.reliable-features .card i{
+.reliable-features .card i {
   font-size: 2.5rem;
 }
 
-.reliable-features .card h2{
+.reliable-features .card h2 {
   font-size: 1.7rem;
 }
 
-.reliable-features .card p{
+.reliable-features .card p {
   width: 70%;
   font-size: 1.1rem;
 }
 
 /* ============== Detect ============== */
-#detect-section{
+#detect-section {
   padding: 3vw 7vw;
   width: 100%;
   height: 80vh;
@@ -322,17 +320,25 @@ a {
   position: relative;
 }
 
-#detect-section img{
+#detect-section img {
   height: 60%;
   width: 47%;
   rotate: -7deg;
   position: absolute;
   right: 3%;
-  box-shadow: -15px 17px 48px -15px rgba(0,0,0,0.75);
-  border-radius: .3rem;
+  box-shadow: -15px 17px 48px -15px rgba(0, 0, 0, 0.75);
+  border-radius: 0.3rem;
+  transition: 0.3s ease;
 }
 
-.detect-info{
+#detect-section img:hover {
+  scale: 1.4;
+  rotate: 0deg;
+  right: 15%;
+  filter: blur(0);
+}
+
+.detect-info {
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -340,41 +346,39 @@ a {
   width: 50%;
 }
 
-.detect-info h5{
+.detect-info h5 {
   font-size: 1.25rem;
   font-weight: 500;
 }
 
-.detect-info h1{
+.detect-info h1 {
   font-size: 3rem;
 }
 
-.detect-info p{
+.detect-info p {
   font-size: 1.25rem;
 }
 
-
 /*  ============= faq ============== */
-#faq-section{
+#faq-section {
   padding: 3vw 7vw;
   display: flex;
   flex-direction: column;
   align-items: start;
 }
 
-#faq-section h1{
+#faq-section h1 {
   margin: 1.75rem 0;
   font-size: 3rem;
 }
 
-#faq-section p{
+#faq-section p {
   font-size: 1.25rem;
   margin-bottom: 1.25rem;
 }
 
-
 .accordion {
-  border-radius: .3rem;
+  border-radius: 0.3rem;
   color: black;
   background-color: white;
   cursor: pointer;
@@ -386,12 +390,12 @@ a {
   font-size: 1.25rem;
 }
 
-
-.active, .accordion:hover {
+.active,
+.accordion:hover {
   background-color: #e0e0e0;
 }
-.accordion:active{
-  scale: .988;
+.accordion:active {
+  scale: 0.988;
 }
 
 .panel {
@@ -402,18 +406,18 @@ a {
   transition: max-height 0.2s ease-out;
 }
 
-.panel p{
+.panel p {
   font-size: 1.25rem;
   padding: 1.25rem 0;
 }
 
 .accordion:after {
-  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  content: "\02795"; /* Unicode character for "plus" sign (+) */
   font-size: 1.25rem;
   color: rgb(0, 0, 0);
   float: right;
   margin-left: 5px;
-  transition: .3 ease;
+  transition: 0.3 ease;
 }
 
 .active:after {
@@ -421,84 +425,84 @@ a {
 }
 
 /* ============ About ============ */
-.about-section{
+.about-section {
   width: 100%;
   padding: 3vw 7vw;
 }
 
-.about-heading{
+.about-heading {
   text-align: center;
 }
 
-.about-heading h5{
+.about-heading h5 {
   font-size: 1.25rem;
 }
 
-.about-heading h1{
+.about-heading h1 {
   font-size: 2.5rem;
-  margin : 1.2rem 0;
+  margin: 1.2rem 0;
 }
 
-.team-details-h{
+.team-details-h {
   display: flex;
   align-items: center;
   justify-content: space-around;
   margin-top: 2rem;
 }
 
-.team-details{
+.team-details {
   display: flex;
   flex-direction: column;
-  align-items:center;
+  align-items: center;
   justify-content: center;
   margin: 2rem 0;
 }
 
-.team-details h3{
+.team-details h3 {
   font-weight: 500;
 }
 
-.team-details h4{
-  opacity: .7;
-  margin: .8rem 0;
+.team-details h4 {
+  opacity: 0.7;
+  margin: 0.8rem 0;
 }
-.team-details p{
+.team-details p {
   width: 70%;
   text-align: center;
 }
 
-.team-card .team-image{
+.team-card .team-image {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.team-card .team-image img{
+.team-card .team-image img {
   height: 200px;
   width: 200px;
   object-fit: cover;
   border: 1.5px solid black;
-  border-radius: .3rem;
+  border-radius: 0.3rem;
 }
 
-.social{
-  margin: .8rem 0;
+.social {
+  margin: 0.8rem 0;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1.2rem;
 }
 
-.social i{
+.social i {
   font-size: 1.75rem;
   transition: 0.3s ease;
 }
 
-.social a:nth-child(3) i{
+.social a:nth-child(3) i {
   font-size: 1.5rem;
 }
 
-.social a:hover{
+.social a:hover {
   color: #787878;
 }
 /* ============== Footer ============= */
@@ -542,18 +546,18 @@ a {
   align-items: center;
   justify-content: center;
   position: fixed;
-  bottom: 30px; 
-  right: 30px; 
-  background-color: #000000; 
+  bottom: 30px;
+  right: 30px;
+  background-color: #000000;
   color: #fff;
   border: none;
-  border-radius: .3rem;
+  border-radius: 0.3rem;
   padding: 10px;
   font-size: 20px;
   cursor: pointer;
   z-index: 1000;
-  box-shadow: -12px 11px 43px -9px rgba(0,0,0,0.79);
-  transition: .3s ease;
+  box-shadow: -12px 11px 43px -9px rgba(0, 0, 0, 0.79);
+  transition: 0.3s ease;
 }
 
 #scrollToTopBtn i {
@@ -564,8 +568,8 @@ a {
   background-color: #6b6b6b; /* Hover background color */
 }
 
-#scrollToTopBtn:active{
-  scale: .9;
+#scrollToTopBtn:active {
+  scale: 0.9;
 }
 
 /*  ============= Responsiveness ============= */
